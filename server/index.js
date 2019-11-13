@@ -5,25 +5,9 @@ const { prisma } = require('../src/generated/prisma-client');
 //https://www.howtographql.com/graphql-js/6-authentication/
 //https://developer.okta.com/blog/2019/05/29/build-crud-nodejs-graphql
 
-let links = [
-    {
-        id: 'link-0',
-        url: 'www.howtographql.com',
-        description: 'Fullstack tutorial for GraphQL'
-    },
-    {
-        id: 'link-1',
-        url: 'www.reachplc.com',
-        description: 'Publishing company'
-    }
-]
-
-let ids = links.length;
-
 const resolvers = {
     Query: {
-        info: () => "Not null",
-        feed: (root, args, context, info) => {
+        feed: (root, args, context) => {
             return context.prisma.links();
         }
     },
