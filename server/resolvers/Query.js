@@ -1,7 +1,7 @@
-function feed (root, args, context) {
+const feed = (root, args, context) => {
     return context.prisma.links();
-}
+};
 
 module.exports = {
     feed,
-}
+};

@@ -5,6 +5,7 @@ const Mutation = require('./resolvers/Mutation');
 const User = require('./resolvers/User');
 const Link = require('./resolvers/Link');
 const Subscription = require('./resolvers/Subscription');
+const Vote = require('./resolvers/Vote');
 
 //https://github.com/catalinpit/GraphQL-UM
 //https://www.howtographql.com/graphql-js/6-authentication/
@@ -15,7 +16,8 @@ const resolvers = {
     Mutation,
     Subscription,
     User,
-    Link
+    Link,
+    Vote,
 };
 
 const server = new GraphQLServer({
